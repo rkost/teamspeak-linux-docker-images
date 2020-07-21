@@ -1,9 +1,12 @@
 FROM alpine:3.10
 
+ARG TS_GID
+ARG TS_UID
+
 RUN apk add --no-cache ca-certificates libstdc++ su-exec
 RUN set -eux; \
-    addgroup -g 9987 ts3server; \
-    adduser -u 9987 -Hh /var/ts3server -G ts3server -s /sbin/nologin -D ts3server; \
+    addgroup -g ${TS_GID} ts3server; \
+    adduser -u ${TS_UID} -Hh /var/ts3server -G ts3server -s /sbin/nologin -D ts3server; \
     install -d -o ts3server -g ts3server -m 775 /var/ts3server /var/run/ts3server /opt/ts3server
 
 ENV PATH "${PATH}:/opt/ts3server"
