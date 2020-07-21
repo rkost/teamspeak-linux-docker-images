@@ -1,5 +1,10 @@
 # About this Repo
 
+This is a fork of the official teamspeak3 server docker repo. I added a docker-compose file as well as the possibility to configure UID and GID for the server instance. This helps with permission problems on the hosts file system.
+
+
+# About the original Repo
+
 This is the Git repo of the Docker [official image](https://docs.docker.com/docker-hub/official_repos/) for [teamspeak](https://registry.hub.docker.com/_/teamspeak/). See [the Docker Hub page](https://registry.hub.docker.com/_/teamspeak/) for the full readme on how to use this Docker image and for information regarding contributing and issues.
 
 The full readme is generated over in [docker-library/docs](https://github.com/docker-library/docs), specifically in [docker-library/docs/teamspeak](https://github.com/docker-library/docs/tree/master/teamspeak).
